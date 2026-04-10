@@ -1,0 +1,97 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  background: linear-gradient(to right, #ffdde1, #ee9ca7);
+  color: #333;
+}
+
+.container {
+  margin-top: 100px;
+}
+
+/* Buttons */
+button {
+  padding: 12px 20px;
+  margin: 10px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* Hidden */
+.hidden {
+  display: none;
+}
+
+/* Fade animation */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Envelope */
+.envelope {
+  width: 200px;
+  height: 120px;
+  margin: auto;
+  position: relative;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.flap {
+  width: 100%;
+  height: 100%;
+  background: #ff6b81;
+  position: absolute;
+  transform-origin: top;
+  transition: transform 0.6s ease;
+}
+
+.envelope.open .flap {
+  transform: rotateX(180deg);
+}
+
+.letter-inside {
+  font-size: 40px;
+  line-height: 120px;
+}
+
+/* Letter */
+#letter {
+  width: 70%;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+/* Gift */
+.gift {
+  font-size: 60px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gift:hover {
+  transform: scale(1.2);
+}
+
+/* Flowers */
+#flowers img {
+  width: 300px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
