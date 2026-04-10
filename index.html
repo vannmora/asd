@@ -10,56 +10,51 @@
 <div class="container">
 
   <!-- QUESTION -->
-  <div id="questionBox" class="fade-in">
+  <div id="questionBox" class="card">
     <h1>Are you still mad? 🥺</h1>
     <div class="buttons">
-      <button onclick="answerYes()">Yes</button>
-      <button onclick="answerNo()">No</button>
+      <button id="yesBtn" class="primary">Yes</button>
+      <button onclick="answerNo()" class="secondary">No</button>
     </div>
   </div>
 
-  <!-- YES RESPONSE -->
-  <div id="sorryBox" class="hidden fade-in">
-    <h2>I'm sorry my love 💔</h2>
-    <p>I love you so much. Please forgive me.</p>
+  <!-- POPUP -->
+  <div id="popup" class="hidden overlay">
+    <div class="popup-box">
+      <p>I’m sorry my love, I love you 💖</p>
+    </div>
   </div>
 
   <!-- ENVELOPE -->
-  <div id="envelopeSection" class="hidden fade-in">
+  <div id="envelopeSection" class="hidden card">
     <div class="envelope" onclick="openEnvelope()">
       <div class="flap"></div>
-      <div class="letter-inside">💌</div>
+      <div class="body"></div>
     </div>
-    <p>Click the envelope</p>
+    <p>Tap the envelope 💌</p>
   </div>
 
-  <!-- LETTER MESSAGE -->
-  <div id="letter" class="hidden fade-in">
-    <p>
-Hey love, how are you? I just want to say I’m truly sorry for everything. I really mean it from the bottom of my heart. I love you through everything—through the ups and downs, the good and the hard times. Please always remember that I’m here for you, no matter what.
-
-You never have to compare yourself to anyone else or question how I treat you. What we have is different, and you are special to me in a way no one else is. You’re the only one who gives me that “kiliti,” the only one who has this kind of place in my heart—so please don’t ever doubt that.
-
-I will always love you, my love. Thank you for everything you’ve done for me. I’m so grateful for you, and I feel incredibly lucky to have you in my life. I want you to know that I believe in you so much, and I’m always proud of you—of everything you do and everything you’re becoming.
-
-I’ll always be here cheering you on, your number one supporter, the first one to clap for every achievement, big or small. Just keep being you, keep going, and keep chasing what makes you happy.
-
-I love you so much, and I’ve got you—always, in all ways.
-    </p>
+  <!-- LETTER -->
+  <div id="letter" class="hidden card">
+    <div class="letter-content">
+      <p id="typedText"></p>
+    </div>
   </div>
 
   <!-- GIFT -->
-  <div id="giftSection" class="hidden fade-in">
-    <div class="gift" onclick="openGift()">🎁</div>
-    <p>Click the gift</p>
+  <div id="giftSection" class="hidden">
+    <button class="gift-btn" onclick="openGift()">🎁 Open your gift</button>
   </div>
 
-  <!-- FLOWERS -->
-  <div id="flowers" class="hidden fade-in">
-    <h2>💐 For you, my love 💐</h2>
-    <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/flowers-1868453_1280.jpg">
-  </div>
+</div>
 
+<!-- FLOWER EMOJI MODAL -->
+<div id="flowersModal" class="hidden overlay">
+  <div class="flowers-box">
+    <div class="big-flower">💐</div>
+    <h2>For you, my love 💖</h2>
+    <button class="back-btn" onclick="goBack()">← Back to message</button>
+  </div>
 </div>
 
 <script src="script.js"></script>
